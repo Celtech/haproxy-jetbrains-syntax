@@ -3,6 +3,13 @@
     <name>HAProxy Syntax Highlighting</name>
     <vendor email="tim@chargeover.com">Tim Hinz</vendor>
 
+    <change-notes><![CDATA[
+        <b>1.0.0</b>
+        <ul>
+            <li>Initial release with full syntax highlighting for HAProxy configuration files.</li>
+        </ul>
+    ]]></change-notes>
+
     <description><![CDATA[
         Syntax highlighting for HAProxy configuration files.<br><br>
         Supports <code>.haproxy</code> files and auto-detects <code>haproxy.cfg</code> /
