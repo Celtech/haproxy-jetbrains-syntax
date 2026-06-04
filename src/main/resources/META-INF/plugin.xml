@@ -1,0 +1,38 @@
+<idea-plugin>
+    <id>com.timhinz.haproxy</id>
+    <name>HAProxy Syntax Highlighting</name>
+    <vendor email="tim@chargeover.com">Tim Hinz</vendor>
+
+    <description><![CDATA[
+        Syntax highlighting for HAProxy configuration files.<br><br>
+        Supports <code>.haproxy</code> files and auto-detects <code>haproxy.cfg</code> /
+        <code>haproxy.conf</code> by content. Highlights sections, directives, option
+        values, balance algorithms, strings, numbers, and comments — with fully
+        customizable colors via <b>Settings → Editor → Color Scheme → HAProxy</b>.
+    ]]></description>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <lang.parserDefinition
+            language="HAProxy"
+            implementationClass="com.timhinz.haproxy.HaproxyParserDefinition"/>
+
+        <fileType
+            name="HAProxy Configuration"
+            implementationClass="com.timhinz.haproxy.HaproxyFileType"
+            fieldName="INSTANCE"
+            language="HAProxy"
+            extensions="haproxy"
+            patterns="haproxy.cfg;haproxy.conf;*.haproxy.cfg;*.haproxy.conf"/>
+
+        <lang.syntaxHighlighterFactory
+            language="HAProxy"
+            implementationClass="com.timhinz.haproxy.highlighting.HaproxySyntaxHighlighterFactory"/>
+
+        <colorSettingsPage
+            implementation="com.timhinz.haproxy.highlighting.HaproxyColorSettingsPage"/>
+
+        <externalAnnotator
+            language="HAProxy"
+            implementationClass="com.timhinz.haproxy.HaproxyNameAnnotator"/>
+    </extensions>
+</idea-plugin>
