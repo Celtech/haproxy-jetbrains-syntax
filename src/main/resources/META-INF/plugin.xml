@@ -43,5 +43,9 @@
         <externalAnnotator
             language="HAProxy"
             implementationClass="com.timhinz.haproxy.HaproxyNameAnnotator"/>
+
+        <completion.contributor
+            language="HAProxy"
+            implementationClass="com.timhinz.haproxy.completion.HaproxyCompletionContributor"/>
     </extensions>
 </idea-plugin>
