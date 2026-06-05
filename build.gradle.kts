@@ -5,7 +5,8 @@ plugins {
 }
 
 group = "com.timhinz"
-version = "1.0.0"
+// Use the git tag (e.g. v1.0.0 → 1.0.0) when building in CI, otherwise fall back to 1.0.0
+version = (System.getenv("GITHUB_REF_NAME")?.removePrefix("v")) ?: "1.0.0"
 
 kotlin {
     jvmToolchain(21)
