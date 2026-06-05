@@ -18,6 +18,8 @@
         customizable colors via <b>Settings → Editor → Color Scheme → HAProxy</b>.
     ]]></description>
 
+    <depends>com.intellij.modules.platform</depends>
+
     <extensions defaultExtensionNs="com.intellij">
         <lang.parserDefinition
             language="HAProxy"
