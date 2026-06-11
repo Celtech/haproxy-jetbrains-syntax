@@ -28,7 +28,8 @@ All colours are fully customisable via **Settings → Editor → Color Scheme �
 ## Installation
 
 ### From the JetBrains Plugin Marketplace
-> Coming soon.
+
+[![Install from JetBrains Marketplace](https://img.shields.io/jetbrains/plugin/v/32122?label=JetBrains%20Marketplace&logo=jetbrains)](https://plugins.jetbrains.com/plugin/32122)
 
 ### From a built ZIP
 1. Clone the repo and build:
@@ -98,10 +99,10 @@ Open **Settings → Editor → Color Scheme → HAProxy** to adjust any of the t
 
 ## Roadmap
 
-- [ ] Code completion for directives, option values, and ACL fetch methods
+- [x] Code completion for directives, option values, and ACL fetch methods
+- [x] JetBrains Plugin Marketplace release
 - [ ] Go-to-definition / find-usages for user-defined names (backends, ACLs, servers)
 - [ ] Inline error detection for invalid directive combinations
-- [ ] JetBrains Plugin Marketplace release
 
 The plugin is built on a minimal flat `ParserDefinition` specifically so that swapping in a full Grammar-Kit parser for completion support is a drop-in change with no impact on the existing highlighting.
 
